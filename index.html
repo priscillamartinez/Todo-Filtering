@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="todo.js"></script>
+    <script src="todos.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Dummy Data Todo List</title>
+    <title>Todo-Filtering</title>
 </head>
 
 <body>
-    <h1 class="title">Dummy Data Todo List</h1>
     <div class="container">
-        <button class="button" onclick="fetchTodos()">Fetch Todos</button><br>
+        <button onclick="fetchTodos()">Fetch Todos</button><br>
         <button class="button" onclick="logTodos()">Log Todos</button><br>
         <button class="button" onclick="populateTodos()">Populate Todos</button><br>
+
+        <p>Select a userID to display titles by that user</p>
+        <p>User: <input type="number" id="userID" value="1"></p>
+        <button onclick="fetchByUser()">Try It</button>
+
+        <ol id="todo-list">
+            <!-- LIs will go here -->
+        </ol>
     </div>
-    <ol id="todo-list">
-        <!-- LIs will go here -->
-    </ol>
 </body>
 
 </html>
